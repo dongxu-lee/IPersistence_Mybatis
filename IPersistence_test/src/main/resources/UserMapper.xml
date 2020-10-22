@@ -1,0 +1,11 @@
+<mapper namespace="com.ldx.dao.IUserDao">
+
+    <select id="findAll" resultType="com.ldx.pojo.User">
+        select * from user
+    </select>
+
+    <select id="findByCondition" resultType="com.ldx.pojo.User" parameterType="com.ldx.pojo.User">
+        select * from user where id = #{id} and username = #{username}
+    </select>
+
+</mapper>
